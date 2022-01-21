@@ -22,6 +22,7 @@ db.sequelize = sequelize;
 db.product = require("../models/product.model.js")(sequelize, Sequelize);
 db.variety = require("../models/variety.model.js")(sequelize, Sequelize);
 
+//product and variety data association using sequelize
 db.product.hasMany(db.variety, { as: "variety" });
 db.variety.belongsTo(db.product, {
   foreignKey: "productId",
