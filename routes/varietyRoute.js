@@ -13,7 +13,7 @@ router.use(
 router.use(bodyParser.json());
 
 //Post varity of products
-router.post("/varieties/:id", upload.array("pics", 3), variety.create);
+router.post("/varieties/:id", upload.array("pics", 30), variety.create);
 
 //display all Associated variety to a product to Dom
 router.get("/varieties/:id", variety.findAll);
